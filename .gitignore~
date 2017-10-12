@@ -10,7 +10,7 @@
 *.fot
 *.cb
 *.cb2
-.DS_Store
+.DS_STORE
 
 ## Intermediate documents:
 *.dvi
