@@ -16,7 +16,7 @@ Exercises \& Problems}
 \section*{Exercises}
 \subsection*{2.1 Insertion Sort}
 \subsubsection*{Exercise 2.1-1}
-Sorting the array A = \{31, 41, 59, 26, 41, 58\} using insertion sort would look something like the following. Highlighted values are the values currently being compared and each value is placed in its final spot at the end of that step.
+Sorting the array $A = \langle 31, 41, 59, 26, 41, 58 \rangle$ using insertion sort would look something like the following. Highlighted values are the values currently being compared and each value is placed in its final spot at the end of that step.
 
 \begin{center}
     \begin {tabular}{|c|c|c|c|c|c|} \hline
@@ -123,10 +123,31 @@ Below is the psuedocode for selection sort.
 
 \subsubsection*{Exercise 2.2-3}
 
+Since each location is equally likely for the element to be, we have the following equation for the expected value for the average case:
+
+\begin{center}
+    $$\sum_{i=1}^{n} i*\frac{1}{n} = \frac{1}{n} \sum_{i=1}^{n} i = \frac{1}{n} * \frac{n * (n+1)}{2} = \frac{n+1}{2}$$
+\end{center}
+
+In the worst case, the element is not there. The element is never there, such that the search must inspect every single element in the array, meaning that the worst case is $\Theta(n)$. \\
+Despite the average case being obviously less in value, taking the highest order term, both the average and worst case are $\Theta(n)$.
+
 \subsubsection*{Exercise 2.2-4}
+
+We can modify almost any algorithm to initially randomly generate some kind of output and check if that output meets the requirements of the altorithm. If it does, output that solution, otherwise run the algorithm as normal. This will reduce the best case to at most linear in most cases, but will be extremely unlikely to ever work.
 
 \subsection*{2.3 Designing Algorithms}
 \subsubsection*{Exercise 2.3-1}
+
+Using merge sort on the array $A = \langle 3,41,52,26,38,57,9,49 \rangle$ is as follows. The highlighted cells indicate the first elements of the subarrays, except for the first row in which each element is its own array.The tree in the following table is upside-down.
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+        3                       &   41  &   52                      &   26  &   38                      &   57  &   9                       &   49  \\ \hline
+        \cellcolor{blue!25}3    &   41  &   \cellcolor{blue!25}26   &   52  &   \cellcolor{blue!25}38   &   57  &   \cellcolor{blue!25}9    &   49  \\ \hline
+        \cellcolor{blue!25}3    &   26  &   41                      &   52  &   \cellcolor{blue!25}9    &   38  &   49                      &   57  \\ \hline
+        \cellcolor{blue!25}3    &   9   &   26                      &   38  &   41                      &   49  &   52                      &   57  \\ \hline
+    \end{tabular}
+\end{center}
 
 \subsubsection*{Exercise 2.3-2}
 
