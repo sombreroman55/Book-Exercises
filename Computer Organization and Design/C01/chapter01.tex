@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\title{Chapter 1 - Computer Abstractions and Technology}
+\author{Andrew Roberts}
+\date{\today}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{arabic}
+
+\noindent\rule{\linewidth}{0.5mm}
+
+\paragraph{Exercise 1.1} \textit{Aside from the smart cell phones used by a billion people, list and
+describe four other types of computers.}\\
+
+Four other types of computers include desktop computers, embedded computer systems, video game consoles, and laptops, among many others.\\
+
+\paragraph{Exercise 1.2} \textit{The eight great ideas in computer architecture are similar to ideas
+from other fields. Match the eight ideas from computer architecture, “Design for
+Moore’s Law,” “Use Abstraction to Simplify Design,” “Make the Common Case
+Fast,” “Performance via Parallelism,” “Performance via Pipelining,” “Performance
+via Prediction,” “Hierarchy of Memories,” and “Dependability via Redundancy” to
+the following ideas from other fields:\\
+\textbf{a.} Assembly lines in automobile manufacturing\\
+\textbf{b.} Suspension bridge cables\\
+\textbf{c.} Aircraft and marine navigation systems that incorporate wind information\\
+\textbf{d.} Express elevators in buildings\\
+\textbf{e.} Library reserve desk\\
+\textbf{f.} Increasing the gate area on a CMOS transistor to decrease its switching time\\
+\textbf{g.} Adding electromagnetic aircraft catapults (which are electrically powered
+as opposed to current steam-powered models), allowed by the increased power
+generation offered by the new reactor technology\\
+\textbf{h.} Building self-driving cars whose control systems partially rely on existing sensor
+systems already installed into the base vehicle, such as lane departure systems and
+smart cruise control systems}\\
+
+\noindent
+\textbf{a.} Performance via Pipelining\\
+\textbf{b.} Dependability via Redundancy\\
+\textbf{c.} Performance via Prediction\\
+\textbf{d.} Make the Common Case Fast\\
+\textbf{e.} Hierarchy of Memories\\
+\textbf{f.} Performance via Parallelism\\
+\textbf{g.} Design for Moore's Law\\
+\textbf{h.} Use Abstraction to Simplify Design\\
+
+\paragraph{Exercise 1.3} \textit{Describe the steps that transform a program written in a high-level
+language such as C into a representation that is directly executed by a computer
+processor.}\\
+
+First, the program is compiled down from the language, such as C, to assmebly code by a compiler. From there, it is assembled by an assembler into machine code, and in C's case linked by a linker into the final binary executable.\\
+
+\paragraph{Exercise 1.4} \textit{Assume a color display using 8 bits for each of the primary colors
+(red, green, blue) per pixel and a frame size of 1280 × 1024.\\
+\textbf{a.} What is the minimum size in bytes of the frame buffer to store a frame?\\
+\textbf{b.} How long would it take, at a minimum, for the frame to be sent over a 100Mbit/s network?}\\
+
+\noindent
+\textbf{a.} $$\frac{8 bits}{color} \times \frac{3 colors}{pixel} \times \frac{1280 \times 1024 pixels}{frame} \times \frac{1 byte}{8 bits} = 3932160 \frac{bytes}{frame}$$\\
+            $$3932160 B \times \frac{1 KB}{1024 B} = 3840 \frac{KB}{frame}$$\\
+            $$3840 KB \times \frac{1 MB}{1024 KB} = 3.75 \frac{MB}{frame}$$\\
+It takes 3.75 MB to store one frame of that size in a frame buffer.\\
+
+\textbf{b.} $$\frac{1 second}{100Mbit} = \frac{1 second}{100 * 1024^{2} bit} = \frac{1 second}{104857600 bits} \times \frac{31457280 bits}{1 frame} = 0.3 \frac{second}{frame}$$\\
+It would take 0.3 seconds to send one frame of that size over a 100 Mbit/second network connection.\\
+
+\end{document}
